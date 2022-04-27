@@ -68,14 +68,14 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     margin: var(--header-size) 0 0 0;
-    background-color: var(--white-color-alt);
+    background-color: #191919;
     color: var(--black-color-alt);
     line-height: var(--text-line-height);
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: black;
 }
 
 ul {
@@ -85,6 +85,10 @@ ul {
 img {
     width: 100%;
     height: auto;
+}
+
+main{
+    margin-top: 39rem;
 }
 
 /*===== CLASS CSS =====*/
@@ -130,18 +134,18 @@ img {
 }
 
 .l-header {
-    width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-    background-color: var(--white-color-alt);
+    width: 100%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.247);
+    background-image: linear-gradient(rgba( 0,0,0,.8), rgba(0,0,0,.4)), url(/assets/images/bg-1.jpg);
+    background-size: cover;
 }
 
 /*===== NAV =====*/
 .nav {
-    max-width: 1024px;
+    max-width: 1220px;
+    margin: 0 auto;
     height: var(--header-size);
     display: flex;
     justify-content: space-between;
@@ -150,20 +154,28 @@ img {
 
 .nav__logo {
     font-weight: var(--semibold-font-weight);
-    color: var(--black-color-alt);
+    color: var(--white-color-alt);
 }
 
 .nav__logo:hover {
     color: var(--black-color);
 }
 
-.nav__menu {
-    display: none;
+.nav__list {
+    display: flex;
+}
+
+.nav__item{
+    margin-left: 2rem;
+}
+
+.nav__link{
+    color: var(--white-color-alt);
+
 }
 
 /*===== HOME =====*/
 .home {
-    background: linear-gradient(135deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4b0082, #8F00FF);
     color: var(--white-color);
     display: flex;
     align-items: center;
@@ -190,7 +202,7 @@ img {
 /*===== DRAGON BALL =====*/
 .dragon-ball {
     /* background: linear-gradient(var(--white-color-alt), #F28100); */
-    background-color: #F28100;
+
 }
 
 .dragon-ball__title, .dragon-ball__subtitle {
